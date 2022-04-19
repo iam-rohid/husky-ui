@@ -1,0 +1,29 @@
+{
+  "name": "@husky-ui/react",
+  "version": "0.1.0",
+  "packageManager": "yarn@3.1.1",
+  "files": [
+    "dist/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "tsconfig": "workspace:^",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@husky-ui/button": "workspace:^",
+    "@husky-ui/core": "workspace:^",
+    "@husky-ui/utilities": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
