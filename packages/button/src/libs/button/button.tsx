@@ -31,10 +31,10 @@ const StyledButton = styled(ButtonBase)(
         : spacing(8),
     paddingInline:
       size === "small"
-        ? spacing(3.5)
+        ? spacing(3)
         : size === "medium"
-        ? spacing(4)
-        : spacing(4.5),
+        ? spacing(3.5)
+        : spacing(4),
     paddingBlock:
       size === "small"
         ? spacing(0.5)
