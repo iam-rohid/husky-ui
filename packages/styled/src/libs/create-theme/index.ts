@@ -1,4 +1,5 @@
-import { defaultTheme, PaletteMode, Theme } from "@husky-ui/styled";
+import { PaletteMode, Theme } from "../../types";
+import { defaultTheme } from "../themes";
 
 export type PaletteColorOption = ColorsGroupOptions & {
   main?: string;

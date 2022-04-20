@@ -1,20 +1,20 @@
-import { Button, ThemeProvider, Box, createTheme } from "@husky-ui/react";
+import { Button, createTheme } from "@husky-ui/react";
 import { MdHome } from "react-icons/md";
+import { useColorScheme } from "../context/color-scheme";
 
 const theme = createTheme();
 
 export default function Web() {
+  const { colorScheme, setColorScheme } = useColorScheme();
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        sx={{
-          display: "flex",
-          width: "100px",
-          height: 200,
-          backgroundColor: "green",
-        }}
-      ></Box>
-      hello
+    <>
+      <Button
+        onClick={() =>
+          setColorScheme(colorScheme === "light" ? "dark" : "light")
+        }
+      >
+        Toggle Theme {colorScheme}
+      </Button>
       <div
         style={{
           display: "flex",
@@ -107,6 +107,6 @@ export default function Web() {
           </Button>
         </div>
       </div>
-    </ThemeProvider>
+    </>
   );
 }

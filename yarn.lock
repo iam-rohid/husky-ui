@@ -1576,7 +1576,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@husky-ui/utilities@workspace:packages/utilities"
   dependencies:
-    "@husky-ui/styled": "workspace:^"
     "@types/color": ^3.0.3
     color: ^4.2.3
     tsconfig: "workspace:^"
@@ -1756,7 +1755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^17.0.12":
+"@types/node@npm:*, @types/node@npm:^17.0.25":
   version: 17.0.25
   resolution: "@types/node@npm:17.0.25"
   checksum: 6a820bd624e69ea772f52a6cdb326484eff5829443dc981939373929ade109f58c21698b9f0a831bd6ceea799e722a75dc49c5fa7a6bc32a81e1cbdfc6507b64
@@ -4878,9 +4877,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:apps/web"
   dependencies:
+    "@emotion/react": ^11.9.0
+    "@emotion/styled": ^11.8.1
     "@husky-ui/core": "workspace:^"
     "@husky-ui/react": "workspace:^"
-    "@types/node": ^17.0.12
+    "@types/node": ^17.0.25
     "@types/react": 17.0.37
     config: "*"
     eslint: 7.32.0
