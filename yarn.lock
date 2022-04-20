@@ -1482,6 +1482,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@husky-ui/box@workspace:^, @husky-ui/box@workspace:packages/box":
+  version: 0.0.0-use.local
+  resolution: "@husky-ui/box@workspace:packages/box"
+  dependencies:
+    "@babel/preset-env": ^7.16.11
+    "@babel/preset-react": ^7.16.7
+    "@husky-ui/core": "workspace:^"
+    "@husky-ui/utilities": "workspace:^"
+    tsconfig: "workspace:^"
+    typescript: ^4.6.3
+  peerDependencies:
+    react: ^16.8.6
+    react-dom: ^16.8.6
+  languageName: unknown
+  linkType: soft
+
 "@husky-ui/button@workspace:^, @husky-ui/button@workspace:packages/button":
   version: 0.0.0-use.local
   resolution: "@husky-ui/button@workspace:packages/button"
@@ -1523,6 +1539,7 @@ __metadata:
   dependencies:
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
+    "@husky-ui/box": "workspace:^"
     "@husky-ui/button": "workspace:^"
     "@husky-ui/core": "workspace:^"
     "@husky-ui/utilities": "workspace:^"

@@ -20,6 +20,7 @@ const StyledButtonBase = styled.button(
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    textDecoration: "none",
     ...(variant === "solid" && {
       border: "none",
       backgroundColor:
@@ -202,6 +203,8 @@ export type ButtonBaseProps = HTMLAttributes<HTMLButtonElement> & {
    * <ButtonBase isLoading={true}>Button</ButtonBase>
    */
   isLoading?: boolean;
+
+  as?: React.ElementType<any>;
 };
 
 export const ButtonBase = ({ ...props }: ButtonBaseProps) => {
