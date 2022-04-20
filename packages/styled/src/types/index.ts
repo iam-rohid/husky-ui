@@ -7,9 +7,23 @@ declare module "@emotion/react" {
     spacing: (value: number) => string;
     borderRadius: (value: number) => string;
     contrastRatio: number;
+    breakpoints: Breakpoints;
+    styles: {
+      global: StyledObject;
+      reset: StyledObject;
+    };
   }
 }
 
+export interface Breakpoints {
+  xs: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+  "2xl": string;
+  full: string;
+}
 export interface ColorsGroup {
   50: string;
   100: string;

@@ -1,4 +1,4 @@
-import { PaletteMode, Theme } from "../../types";
+import { Breakpoints, PaletteMode, StyledObject, Theme } from "../../types";
 import { defaultTheme } from "../themes";
 
 export type PaletteColorOption = ColorsGroupOptions & {
@@ -53,6 +53,11 @@ export type ThemeOptions = {
   spacing?: SpacingOption;
   borderRadius?: BorderRadiusOption;
   contrastRatio?: number;
+  breakpoints?: Breakpoints;
+  styles?: {
+    global?: StyledObject;
+    reset?: StyledObject;
+  };
 };
 
 export const createTheme = (
@@ -148,6 +153,11 @@ export const createTheme = (
     },
     spacing,
     borderRadius,
+    breakpoints: themeOptions.breakpoints || theme.breakpoints,
     contrastRatio: themeOptions.contrastRatio || theme.contrastRatio,
+    styles: {
+      global: [theme.styles.global, themeOptions.styles?.global],
+      reset: [theme.styles.reset, themeOptions.styles?.reset],
+    },
   };
 };

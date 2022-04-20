@@ -1,13 +1,17 @@
-import { BaseElement, BaseElementProps } from "@husky-ui/styled";
+import {
+  BaseElement,
+  BaseElementProps,
+  OverwritableType,
+} from "@husky-ui/styled";
 import { ElementType } from "react";
 
-export type BoxProps = BaseElementProps<"div"> & {};
+export interface BoxProps<T extends ElementType> extends BaseElementProps<T> {}
 
 export function Box<T extends ElementType = "div">(
-  props: BaseElementProps<"div"> & BoxProps
+  props: OverwritableType<BoxProps<T>, T>
 ) {
   const { as, ...rest } = props;
-  return <BaseElement as={as} {...rest} />;
+  return <BaseElement as={as as any} {...rest} />;
 }
 
 export default Box;

@@ -1,7 +1,6 @@
 import { Global, ThemeProvider as EmotionTP } from "@emotion/react";
 import type { StyledObject, Theme } from "../../types";
 import { ReactNode } from "react";
-import { CSSReset } from "../css-reset";
 
 export type ThemeProviderProps = {
   children: ReactNode;
@@ -17,8 +16,13 @@ export const ThemeProvider = ({
 }: ThemeProviderProps) => {
   return (
     <EmotionTP theme={theme}>
-      {resetCSS && <CSSReset />}
-      {styles && <Global styles={styles} />}
+      <Global
+        styles={(theme) => [
+          ...(resetCSS ? [theme.styles.reset] : []),
+          theme.styles.global,
+          styles,
+        ]}
+      />
       {children}
     </EmotionTP>
   );

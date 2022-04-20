@@ -1,9 +1,4 @@
-import {
-  ThemeProvider,
-  CSSReset,
-  lightTheme,
-  darkTheme,
-} from "@husky-ui/react";
+import { ThemeProvider, lightTheme, darkTheme } from "@husky-ui/react";
 import React, {
   createContext,
   ReactNode,

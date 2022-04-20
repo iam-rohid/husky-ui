@@ -12,10 +12,10 @@ export type OverwritableType<OwnProps, Type extends ElementType> = Prefer<
   ElementPropsWithoutRef<Type>
 >;
 
-export type BaseElementProps<T extends ElementType> = {
+export interface BaseElementProps<T extends ElementType> {
   as?: T;
   sx?: StyledObject;
-};
+}
 export function BaseElement<T extends ElementType = "div">(
   props: OverwritableType<BaseElementProps<T>, T>
 ) {
