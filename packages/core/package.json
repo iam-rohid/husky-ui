@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "clean": "rimraf .turbo && rimraf dist && rimraf node_modules"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
@@ -24,8 +25,7 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
+    "@husky-ui/styled": "workspace:^",
     "@husky-ui/utilities": "workspace:^"
   }
 }

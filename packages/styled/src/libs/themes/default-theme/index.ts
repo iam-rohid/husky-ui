@@ -1,5 +1,5 @@
 import { Theme } from "@emotion/react";
-import { Colors, Palette } from "../../types";
+import { Colors, Palette } from "../../../types";
 import {
   black,
   blue,
@@ -13,7 +13,7 @@ import {
   violet,
   white,
   yellow,
-} from "../../libs/colors";
+} from "../../colors";
 
 const colors: Colors = {
   blue,

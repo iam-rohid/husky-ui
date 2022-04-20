@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { styled, Theme } from "@husky-ui/core";
+import { styled, Theme } from "@husky-ui/styled";
 import ButtonBase, { ButtonBaseProps } from "../button-base/button-base";
 
 const StyledButton = styled(ButtonBase)(

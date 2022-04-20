@@ -1,5 +1,5 @@
-import { styled, Theme } from "@husky-ui/core";
-import type { CSSObject } from "@husky-ui/core";
+import { styled, Theme } from "@husky-ui/styled";
+import type { CSSObject } from "@husky-ui/styled";
 import { HTMLAttributes } from "react";
 const StyledBox = styled.div(({ theme, sx }: { theme: Theme } & BoxProps) => ({
   ...sx,

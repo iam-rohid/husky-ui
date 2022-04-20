@@ -1,15 +1,9 @@
-import { Button, ThemeProvider, Box, Global } from "@husky-ui/react";
+import { Button, ThemeProvider, Box, defaultTheme } from "@husky-ui/react";
 import { MdHome } from "react-icons/md";
+
 export default function Web() {
   return (
-    <ThemeProvider>
-      <Global
-        styles={{
-          html: {
-            fontFamily: "sans-serif",
-          },
-        }}
-      />
+    <ThemeProvider theme={defaultTheme}>
       <Box
         sx={{
           display: "flex",

@@ -1,4 +1,4 @@
-import { styled, Theme } from "@husky-ui/core";
+import { styled, Theme } from "@husky-ui/styled";
 import { HTMLAttributes } from "react";
 import { alpha, lighten, darken } from "@husky-ui/utilities";
 
