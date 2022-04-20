@@ -7,7 +7,7 @@ export const alpha = (color: string, alpha: number) => {
 
 export const fade = (color: string, fade: number) => {
   const c = Color(color);
-  return c.fade(fade).hex();
+  return c.fade(fade).toString();
 };
 
 export const isDark = (color: string): boolean => {
@@ -21,35 +21,35 @@ export const isLight = (color: string): boolean => {
 
 export const darken = (color: string, amount: number) => {
   const c = Color(color);
-  return c.darken(amount).hex();
+  return c.darken(amount).toString();
 };
 
 export const lighten = (color: string, amount: number) => {
   const c = Color(color);
-  return c.lighten(amount).hex();
+  return c.lighten(amount).toString();
 };
 
 export const whiten = (color: string, amount: number) => {
   const c = Color(color);
-  return c.whiten(amount).hex();
+  return c.whiten(amount).toString();
 };
 
 export const blacken = (color: string, amount: number) => {
   const c = Color(color);
-  return c.blacken(amount);
+  return c.blacken(amount).hex();
 };
 export const lightness = (color: string, amount: number) => {
   const c = Color(color);
-  return c.lightness(amount);
+  return c.lightness(amount).toString();
 };
 
 export const rotate = (color: string, degrees: number) => {
   const c = Color(color);
-  return c.rotate(degrees);
+  return c.rotate(degrees).toString();
 };
 
 export const mix = (color1: string, color2: string, weight?: number) => {
   const c1 = Color(color1);
   const c2 = Color(color2);
-  return c1.mix(c2, weight);
+  return c1.mix(c2, weight).toString();
 };

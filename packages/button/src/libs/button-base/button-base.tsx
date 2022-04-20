@@ -55,6 +55,7 @@ const StyledButtonBase = styled.button(
           : color === "light"
           ? colors.black
           : colors.white,
+
       ...(!isLoading && {
         "&:hover": {
           backgroundColor:
@@ -86,9 +87,6 @@ const StyledButtonBase = styled.button(
               ? colors.gray[100]
               : colors.gray[700],
         },
-        // "&:active": {
-        //   boxShadow: "none",
-        // },
         "&:focus": {
           backgroundColor:
             color === "primary"
