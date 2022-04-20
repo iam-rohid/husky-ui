@@ -1,17 +1,13 @@
-import { styled, Theme } from "@husky-ui/styled";
-import type { CSSObject } from "@husky-ui/styled";
-import { HTMLAttributes } from "react";
-const StyledBox = styled.div(({ theme, sx }: { theme: Theme } & BoxProps) => ({
-  ...sx,
-}));
+import { BaseElement, BaseElementProps } from "@husky-ui/styled";
+import { ElementType } from "react";
 
-export type BoxProps = HTMLAttributes<HTMLDivElement> & {
-  sx?: CSSObject;
-  as?: React.ElementType<any>;
-};
+export type BoxProps = BaseElementProps<"div"> & {};
 
-export const Box = ({ ...props }: BoxProps) => {
-  return <StyledBox {...props}>Hello world 2</StyledBox>;
-};
+export function Box<T extends ElementType = "div">(
+  props: BaseElementProps<"div"> & BoxProps
+) {
+  const { as, ...rest } = props;
+  return <BaseElement as={as} {...rest} />;
+}
 
 export default Box;

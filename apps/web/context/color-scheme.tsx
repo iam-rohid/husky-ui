@@ -1,17 +1,16 @@
-import { createTheme, ThemeProvider, CssReset } from "@husky-ui/react";
-import React, { createContext, ReactNode, useMemo, useState } from "react";
-
-const lightTheme = createTheme({
-  palette: {
-    mode: "light",
-  },
-});
-
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
+import {
+  ThemeProvider,
+  CSSReset,
+  lightTheme,
+  darkTheme,
+} from "@husky-ui/react";
+import React, {
+  createContext,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 export type ColorScheme = "light" | "dark";
 
@@ -34,6 +33,10 @@ export const ColorSchemeProvider = ({ children }: ColorSchemeProviderProps) => {
     [colorScheme]
   );
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", colorScheme === "dark");
+  }, [colorScheme]);
+
   return (
     <ColorSchemeContext.Provider
       value={{
@@ -41,8 +44,7 @@ export const ColorSchemeProvider = ({ children }: ColorSchemeProviderProps) => {
         setColorScheme,
       }}
     >
-      <ThemeProvider theme={theme}>
-        <CssReset />
+      <ThemeProvider theme={theme} resetCSS>
         {children}
       </ThemeProvider>
     </ColorSchemeContext.Provider>

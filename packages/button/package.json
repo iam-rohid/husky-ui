@@ -12,7 +12,6 @@
     "clean": "rimraf .turbo && rimraf dist && rimraf node_modules"
   },
   "dependencies": {
-    "@husky-ui/core": "workspace:^",
     "@husky-ui/styled": "workspace:^",
     "@husky-ui/utilities": "workspace:^"
   },

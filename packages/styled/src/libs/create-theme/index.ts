@@ -55,95 +55,99 @@ export type ThemeOptions = {
   contrastRatio?: number;
 };
 
-export const createTheme = (theme?: ThemeOptions): Theme => {
-  if (!theme) return defaultTheme;
+export const createTheme = (
+  themeOptions?: ThemeOptions,
+  from?: Theme
+): Theme => {
+  if (!themeOptions) return defaultTheme;
+  const theme = from || defaultTheme;
 
   const spacing: Theme["spacing"] =
-    theme.spacing != undefined
-      ? typeof theme.spacing === "number"
-        ? (value) => `${(theme.spacing as number) * value}px`
-        : theme.spacing
-      : defaultTheme.spacing;
+    themeOptions.spacing != undefined
+      ? typeof themeOptions.spacing === "number"
+        ? (value) => `${(themeOptions.spacing as number) * value}px`
+        : themeOptions.spacing
+      : theme.spacing;
 
   const borderRadius: Theme["borderRadius"] =
-    theme.borderRadius != undefined
-      ? typeof theme.borderRadius === "number"
-        ? (value) => `${(theme.borderRadius as number) * value}px`
-        : theme.borderRadius
-      : defaultTheme.borderRadius;
+    themeOptions.borderRadius != undefined
+      ? typeof themeOptions.borderRadius === "number"
+        ? (value) => `${(themeOptions.borderRadius as number) * value}px`
+        : themeOptions.borderRadius
+      : theme.borderRadius;
 
   return {
     palette: {
-      mode: theme.palette?.mode || defaultTheme.palette.mode,
+      mode: themeOptions.palette?.mode || theme.palette.mode,
       primary: {
-        ...defaultTheme.palette.primary,
-        ...theme.palette?.primary,
+        ...theme.palette.primary,
+        ...themeOptions.palette?.primary,
       },
       secondary: {
-        ...defaultTheme.palette.secondary,
-        ...theme.palette?.secondary,
+        ...theme.palette.secondary,
+        ...themeOptions.palette?.secondary,
       },
       danger: {
-        ...defaultTheme.palette.danger,
-        ...theme.palette?.danger,
+        ...theme.palette.danger,
+        ...themeOptions.palette?.danger,
       },
       warning: {
-        ...defaultTheme.palette.warning,
-        ...theme.palette?.warning,
+        ...theme.palette.warning,
+        ...themeOptions.palette?.warning,
       },
       info: {
-        ...defaultTheme.palette.info,
-        ...theme.palette?.info,
+        ...theme.palette.info,
+        ...themeOptions.palette?.info,
       },
       success: {
-        ...defaultTheme.palette.success,
-        ...theme.palette?.success,
+        ...theme.palette.success,
+        ...themeOptions.palette?.success,
       },
     },
     colors: {
-      ...defaultTheme.colors,
-      black: theme.colors?.black || defaultTheme.colors.black,
-      white: theme.colors?.white || defaultTheme.colors.white,
-      transparent: theme.colors?.transparent || defaultTheme.colors.white,
+      ...theme.colors,
+      black: themeOptions.colors?.black || theme.colors.black,
+      white: themeOptions.colors?.white || theme.colors.white,
+      transparent: themeOptions.colors?.transparent || theme.colors.white,
       yellow: {
-        ...defaultTheme.colors.yellow,
-        ...theme.colors?.yellow,
+        ...theme.colors.yellow,
+        ...themeOptions.colors?.yellow,
       },
       blue: {
-        ...defaultTheme.colors.blue,
-        ...theme.colors?.blue,
+        ...theme.colors.blue,
+        ...themeOptions.colors?.blue,
       },
       gray: {
-        ...defaultTheme.colors.gray,
-        ...theme.colors?.gray,
+        ...theme.colors.gray,
+        ...themeOptions.colors?.gray,
       },
       green: {
-        ...defaultTheme.colors.green,
-        ...theme.colors?.green,
+        ...theme.colors.green,
+        ...themeOptions.colors?.green,
       },
       red: {
-        ...defaultTheme.colors.red,
-        ...theme.colors?.red,
+        ...theme.colors.red,
+        ...themeOptions.colors?.red,
       },
       indigo: {
-        ...defaultTheme.colors.indigo,
-        ...theme.colors?.indigo,
+        ...theme.colors.indigo,
+        ...themeOptions.colors?.indigo,
       },
       purple: {
-        ...defaultTheme.colors.purple,
-        ...theme.colors?.purple,
+        ...theme.colors.purple,
+        ...themeOptions.colors?.purple,
       },
       sky: {
-        ...defaultTheme.colors.sky,
-        ...theme.colors?.sky,
+        ...theme.colors.sky,
+        ...themeOptions.colors?.sky,
       },
       violet: {
-        ...defaultTheme.colors.violet,
-        ...theme.colors?.violet,
+        ...theme.colors.violet,
+        ...themeOptions.colors?.violet,
       },
     },
     spacing,
     borderRadius,
-    contrastRatio: theme.contrastRatio || defaultTheme.contrastRatio,
+    contrastRatio: themeOptions.contrastRatio || theme.contrastRatio,
   };
 };

@@ -1,4 +1,4 @@
-import type { Theme } from "@emotion/react";
+import type { Interpolation, Theme } from "@emotion/react";
 
 declare module "@emotion/react" {
   interface Theme {
@@ -56,3 +56,5 @@ export type Palette = {
 };
 
 export type { Theme };
+
+export type StyledObject = Interpolation<Theme>;

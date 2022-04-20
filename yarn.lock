@@ -1488,7 +1488,6 @@ __metadata:
   dependencies:
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
-    "@husky-ui/core": "workspace:^"
     "@husky-ui/styled": "workspace:^"
     "@husky-ui/utilities": "workspace:^"
     tsconfig: "workspace:^"
@@ -1505,27 +1504,8 @@ __metadata:
   dependencies:
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
-    "@husky-ui/core": "workspace:^"
     "@husky-ui/styled": "workspace:^"
     "@husky-ui/utilities": "workspace:^"
-    tsconfig: "workspace:^"
-    typescript: ^4.6.3
-  peerDependencies:
-    react: ^16.8.6
-    react-dom: ^16.8.6
-  languageName: unknown
-  linkType: soft
-
-"@husky-ui/core@workspace:^, @husky-ui/core@workspace:packages/core":
-  version: 0.0.0-use.local
-  resolution: "@husky-ui/core@workspace:packages/core"
-  dependencies:
-    "@babel/preset-env": ^7.16.11
-    "@babel/preset-react": ^7.16.7
-    "@husky-ui/styled": "workspace:^"
-    "@husky-ui/utilities": "workspace:^"
-    "@types/react": ^18.0.5
-    "@types/react-dom": ^18.0.1
     tsconfig: "workspace:^"
     typescript: ^4.6.3
   peerDependencies:
@@ -1542,7 +1522,6 @@ __metadata:
     "@babel/preset-react": ^7.16.7
     "@husky-ui/box": "workspace:^"
     "@husky-ui/button": "workspace:^"
-    "@husky-ui/core": "workspace:^"
     "@husky-ui/styled": "workspace:^"
     "@husky-ui/utilities": "workspace:^"
     tsconfig: "workspace:^"
@@ -4879,7 +4858,6 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
-    "@husky-ui/core": "workspace:^"
     "@husky-ui/react": "workspace:^"
     "@types/node": ^17.0.25
     "@types/react": 17.0.37

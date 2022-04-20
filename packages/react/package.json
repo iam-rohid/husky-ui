@@ -21,7 +21,6 @@
   "dependencies": {
     "@husky-ui/box": "workspace:^",
     "@husky-ui/button": "workspace:^",
-    "@husky-ui/core": "workspace:^",
     "@husky-ui/styled": "workspace:^",
     "@husky-ui/utilities": "workspace:^"
   },

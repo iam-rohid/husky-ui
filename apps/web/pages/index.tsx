@@ -1,13 +1,25 @@
-import { Button, createTheme } from "@husky-ui/react";
+import { BaseElement, Button } from "@husky-ui/react";
 import { MdHome } from "react-icons/md";
 import { useColorScheme } from "../context/color-scheme";
-
-const theme = createTheme();
 
 export default function Web() {
   const { colorScheme, setColorScheme } = useColorScheme();
   return (
     <>
+      <BaseElement
+        as="a"
+        sx={(theme) => ({
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 200,
+          height: 200,
+          backgroundColor: theme.palette.warning[500],
+        })}
+      >
+        Hllo world
+      </BaseElement>
       <Button
         onClick={() =>
           setColorScheme(colorScheme === "light" ? "dark" : "light")
