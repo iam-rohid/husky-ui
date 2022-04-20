@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider } from "@husky-ui/react";
+import { createTheme, ThemeProvider, CssReset } from "@husky-ui/react";
 import React, { createContext, ReactNode, useMemo, useState } from "react";
 
 const lightTheme = createTheme({
@@ -41,7 +41,10 @@ export const ColorSchemeProvider = ({ children }: ColorSchemeProviderProps) => {
         setColorScheme,
       }}
     >
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssReset />
+        {children}
+      </ThemeProvider>
     </ColorSchemeContext.Provider>
   );
 };
