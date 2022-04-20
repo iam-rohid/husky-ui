@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
+    "examples/*",
     "packages/*",
-    "configs/*"
+    "configs/*",
+    "docs"
   ],
   "scripts": {
     "build": "turbo run build",
